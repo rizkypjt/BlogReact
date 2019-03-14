@@ -9,11 +9,12 @@ export default class About extends Component {
             <div>
                 <Router>
                     <div>
-                        <Link to="/category">Listing</Link>
-                        <Link to="/category/Add">Add</Link>
+                        <hr/>
+                        <Link to="/category" className="btn btn-primary">Listing</Link>&nbsp;
+                        <Link to="/category/Add" className="btn btn-primary">Add</Link>
 
                         <Route exact path="/category" component={Listing}/>
-                        <Route exact path="/category" component={Add}/>
+                        <Route exact path="/category/Add" component={Add}/>
                     </div>
                 </Router>
             </div>

@@ -62769,7 +62769,7 @@ var Header = function (_Component) {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'nav',
-                        { className: 'navbar navbar-expand-lg navbar-light bg-light' },
+                        { className: 'navbar navbar-expand-lg navbar-dark bg-dark' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'button',
                             { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarSupportedContent', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
@@ -65698,18 +65698,20 @@ var About = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         null,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                            { to: '/category' },
+                            { to: '/category', className: 'btn btn-primary' },
                             'Listing'
                         ),
+                        '\xA0',
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                            { to: '/category/Add' },
+                            { to: '/category/Add', className: 'btn btn-primary' },
                             'Add'
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Route */], { exact: true, path: '/category', component: __WEBPACK_IMPORTED_MODULE_3__Listing__["a" /* default */] }),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Route */], { exact: true, path: '/category', component: __WEBPACK_IMPORTED_MODULE_2__Add__["a" /* default */] })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Route */], { exact: true, path: '/category/Add', component: __WEBPACK_IMPORTED_MODULE_2__Add__["a" /* default */] })
                     )
                 )
             );
@@ -65748,12 +65750,30 @@ var Add = function (_Component) {
     }
 
     _createClass(Add, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
+                "div",
                 null,
-                'This is Add'
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "form",
+                    null,
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { "class": "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { "for": "category_name" },
+                            "Category Name"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", "class": "form-control", id: "category_name", "aria-describedby": "emailHelp", placeholder: "Enter Category" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "button",
+                        { type: "submit", "class": "btn btn-primary" },
+                        "Submit"
+                    )
+                )
             );
         }
     }]);
@@ -65790,9 +65810,140 @@ var Listing = function (_Component) {
     }
 
     _createClass(Listing, [{
-        key: 'render',
+        key: "render",
         value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', null);
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "table",
+                    { className: "table table-hover" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "thead",
+                        null,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "tr",
+                            null,
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "th",
+                                { scope: "col" },
+                                "#"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "th",
+                                { scope: "col" },
+                                "Category Name"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "th",
+                                { scope: "col" },
+                                "Status"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "th",
+                                { scope: "col" },
+                                "Created At"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "th",
+                                { scope: "col" },
+                                "Update At"
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "tbody",
+                        null,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "tr",
+                            null,
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "th",
+                                { scope: "row" },
+                                "1"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Cat 1"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Active"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Date"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Date"
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "tr",
+                            null,
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "th",
+                                { scope: "row" },
+                                "2"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Cat 1"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Active"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Date"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Date"
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "tr",
+                            null,
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "th",
+                                { scope: "row" },
+                                "3"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Cat 1"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Active"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Date"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "td",
+                                null,
+                                "Date"
+                            )
+                        )
+                    )
+                )
+            );
         }
     }]);
 
